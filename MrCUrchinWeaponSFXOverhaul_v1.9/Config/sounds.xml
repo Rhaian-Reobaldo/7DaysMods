@@ -1,0 +1,838 @@
+<MSFX>
+<!-- Primary Focus, Finish Reload SFX, Work Launcher SFX, Obtain Misc Range SFX, Work on Turret SFX... Test All, Create Trailer, Release 7/16 -->
+<!-- Vinalla Ranged Weapon SFX Overhaul -->
+    <!-- Automatics Weapon Fire [x]; Reload []; ADS Audio []; Distance Variation []; Indoor/Outdoor Variation []; Indoor/Outdoor Distance Variation []; --> <!-- Total ACTIVE Sounds Count [134]-->
+        <!-- AK [x]; [x]; []; []; []; [] -->
+            <!-- ///// Weapon Fire SFX ///// -->
+                <!-- Audio Silent Bug Fix -->
+                <set xpath="/Sounds/SoundDataNode[@name='ak47_fire']/MaxVoices/@value">100</set>
+                <set xpath="/Sounds/SoundDataNode[@name='ak47_fire_end']/MaxVoices/@value">100</set>
+                <set xpath="/Sounds/SoundDataNode[@name='ak47_s_fire']/MaxVoices/@value">100</set>
+
+                <!-- Weapon Fire SFX-->
+                <set xpath="/Sounds/SoundDataNode[@name='ak47_fire']/AudioClip[contains(@ClipName, 'ak47_fire1')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXak47_fire-1</set>
+                <set xpath="/Sounds/SoundDataNode[@name='ak47_fire']/AudioClip[contains(@ClipName, 'ak47_fire2')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXak47_fire-2</set>
+                <set xpath="/Sounds/SoundDataNode[@name='ak47_fire']/AudioClip[contains(@ClipName, 'ak47_fire3')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXak47_fire-3</set>
+                <set xpath="/Sounds/SoundDataNode[@name='ak47_fire']/AudioClip[contains(@ClipName, 'ak47_fire4')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXak47_fire-4</set>
+                
+                <set xpath="/Sounds/SoundDataNode[@name='ak47_fire_end']/AudioClip[contains(@ClipName, 'ak47_fire_end')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXak47_end-1</set>
+
+                <set xpath="/Sounds/SoundDataNode[@name='ak47_s_fire']/AudioClip[contains(@ClipName, 'ak47_s_fire1')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXak47_s_fire-1</set>
+                <set xpath="/Sounds/SoundDataNode[@name='ak47_s_fire']/AudioClip[contains(@ClipName, 'ak47_s_fire2')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXak47_s_fire-2</set>
+                <set xpath="/Sounds/SoundDataNode[@name='ak47_s_fire']/AudioClip[contains(@ClipName, 'ak47_s_fire3')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXak47_s_fire-3</set>
+                <set xpath="/Sounds/SoundDataNode[@name='ak47_s_fire']/AudioClip[contains(@ClipName, 'ak47_s_fire4')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXak47_s_fire-4</set>
+
+            <!-- ///// Weapon Reload SFX ///// -->
+                <!--AK [x]; [x]; [x] -->
+                <set xpath="/Sounds/SoundDataNode[@name='ak47_reload_part_01']/AudioClip[contains(@ClipName, 'ak47_reload_part_01')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXak47_reload_part_01</set> <!-- Better, First Sound Needs Work, Racking Maybe Beefer-->
+                <set xpath="/Sounds/SoundDataNode[@name='ak47_reload_part_02']/AudioClip[contains(@ClipName, 'ak47_reload_part_02')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXak47_reload_part_02</set> 
+                <set xpath="/Sounds/SoundDataNode[@name='ak47_reload_part_03']/AudioClip[contains(@ClipName, 'ak47_reload_part_03')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXak47_reload_part_03</set> 
+                <set xpath="/Sounds/SoundDataNode[@name='ak47_reload_part_04']/AudioClip[contains(@ClipName, 'ak47_reload_part_04')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXak47_reload_part_04</set> 
+	            <!--  ///// DRY FIRE /////-->
+		        <append xpath="/Sounds">
+		            <SoundDataNode name="ak47_dryfire"><AudioSource name="Sounds/AudioSource_Reloads"/><Noise ID="6" noise="7" time="2" muffled_when_crouched="0.5"/>
+			            <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponHandling.unity3d?MSFXak47_dryfire"/>
+			            <LocalCrouchVolumeScale value="0.5"/><CrouchNoiseScale value="1"/><NoiseScale value="1"/><MaxVoices value="30"/><MaxVoicesPerEntity value="10"/>
+			            <MaxRepeatRate value="0.001"/><LowestPitch name="0.9"/><HighestPitch name="1.0"/>
+		            </SoundDataNode>
+	            </append>
+	
+            <!-- ///// Weapon ADS SFX ///// -->
+            <!-- ///// Weapon Distance Var SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor Distance Var SFX ///// -->
+        <!-- M60 [x]; []; []; []; []; [] -->
+            <!-- ///// Weapon Fire SFX ///// -->
+                <!-- Audio Silent Bug Fix -->
+                <set xpath="/Sounds/SoundDataNode[@name='m60_fire']/MaxVoices/@value">100</set>
+                <set xpath="/Sounds/SoundDataNode[@name='m60_fire_end']/MaxVoices/@value">100</set>
+                <set xpath="/Sounds/SoundDataNode[@name='m60_s_fire']/MaxVoices/@value">100</set>
+
+                <!-- Weapon Fire SFX-->
+                <set xpath="/Sounds/SoundDataNode[@name='m60_fire']/AudioClip[contains(@ClipName, 'm60_fire1')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXm60_fire-1</set> 
+                <set xpath="/Sounds/SoundDataNode[@name='m60_fire']/AudioClip[contains(@ClipName, 'm60_fire2')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXm60_fire-2</set>
+                <set xpath="/Sounds/SoundDataNode[@name='m60_fire']/AudioClip[contains(@ClipName, 'm60_fire3')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXm60_fire-3</set>
+                <set xpath="/Sounds/SoundDataNode[@name='m60_fire']/AudioClip[contains(@ClipName, 'm60_fire4')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXm60_fire-4</set>
+
+                <!--<set xpath="/Sounds/SoundDataNode[@name='m60_fire_end']/AudioClip/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?m60_fire_end</set> [DISABLED] -->
+
+                <set xpath="/Sounds/SoundDataNode[@name='m60_s_fire']/AudioClip[contains(@ClipName, 'm60_s_fire1')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXm60_s_fire-1</set>
+                <set xpath="/Sounds/SoundDataNode[@name='m60_s_fire']/AudioClip[contains(@ClipName, 'm60_s_fire2')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXm60_s_fire-2</set>
+                <set xpath="/Sounds/SoundDataNode[@name='m60_s_fire']/AudioClip[contains(@ClipName, 'm60_s_fire3')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXm60_s_fire-3</set>
+                <set xpath="/Sounds/SoundDataNode[@name='m60_s_fire']/AudioClip[contains(@ClipName, 'm60_s_fire4')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXm60_s_fire-4</set>
+
+            <!-- ///// Weapon Reload SFX ///// -->
+                <!-- M60 [x]; [x]; [x]-->
+                <set xpath="/Sounds/SoundDataNode[@name='m60_reload_part_01']/AudioClip[contains(@ClipName, 'm60_reload_part_01')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXm60_reload_part_01</set> <!-- Clicking Sounds All Clips -->
+                <set xpath="/Sounds/SoundDataNode[@name='m60_reload_part_02']/AudioClip[contains(@ClipName, 'm60_reload_part_02')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXm60_reload_part_02</set> 
+                <set xpath="/Sounds/SoundDataNode[@name='m60_reload_part_04']/AudioClip[contains(@ClipName, 'm60_reload_part_04')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXm60_reload_part_04</set>
+                <set xpath="/Sounds/SoundDataNode[@name='m60_reload_part_05']/AudioClip[contains(@ClipName, 'm60_reload_part_05')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXm60_reload_part_05</set>
+                <set xpath="/Sounds/SoundDataNode[@name='m60_reload_part_06']/AudioClip[contains(@ClipName, 'm60_reload_part_06')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXm60_reload_part_06</set>
+                <set xpath="/Sounds/SoundDataNode[@name='m60_reload_part_07']/AudioClip[contains(@ClipName, 'm60_reload_part_07')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXm60_reload_part_07</set>
+                <set xpath="/Sounds/SoundDataNode[@name='m60_reload_part_08']/AudioClip[contains(@ClipName, 'm60_reload_part_08')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXm60_reload_part_08</set> <!-- Louder Rack -->
+                <set xpath="/Sounds/SoundDataNode[@name='m60_reload_part_09']/AudioClip[contains(@ClipName, 'm60_reload_part_09')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXm60_reload_part_09</set> 
+	           
+	            <!--  ///// DRY FIRE /////-->
+	            <append xpath="/Sounds">
+                    <SoundDataNode name="m60_dryfire"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+                    <Noise ID="6" noise="7" time="2" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponHandling.unity3d?MSFXauto_dryfire"/>
+                    <LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/>
+					<MaxRepeatRate value="0.001"/> <LowestPitch name="0.9"/> <HighestPitch name="0.95"/> </SoundDataNode>
+                </append>
+	
+            <!-- ///// Weapon ADS SFX ///// -->
+            <!-- ///// Weapon Distance Var SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor Distance Var SFX ///// -->
+
+        <!-- Pipe SMG [x]; []; []; []; []; [] -->
+            <!-- ///// Weapon Fire SFX ///// -->
+                <!-- Audio Silent Bug Fix -->
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_smg_fire']/MaxVoices/@value">100</set>
+
+                <!-- Weapon Fire SFX-->
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_smg_fire']/AudioClip/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXpipe_smg_fire-1</set>
+                
+                <!-- Adds Serperate Suppressed Audio "pipe_smg_s_fire" [SoundDataNode Similar to "smg_s_fire"]-->
+                <append xpath="/Sounds">
+                    <SoundDataNode name="pipe_smg_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+                    <Noise ID="0" noise="18" time="2" muffled_when_crouched="0.8" heat_map_strength="0.4" heat_map_time="180"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXpipe_smg_s_fire-1"/>
+                    <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="100"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/></SoundDataNode>
+                </append>
+
+            <!-- ///// Weapon Reload SFX ///// -->
+                <!-- Pipe SMG [x]; [x]; [] -->
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_smg_magout']/AudioClip[contains(@ClipName, 'pipe_smg_magout')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_smg_magout</set>
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_smg_magin']/AudioClip[contains(@ClipName, 'pipe_smg_magin')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_smg_magin</set>
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_smg_magpat']/AudioClip[contains(@ClipName, 'pipe_smg_magpat')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_smg_magpat</set>
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_smg_slideback']/AudioClip[contains(@ClipName, 'pipe_smg_slideback')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_smg_slideback</set>
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_smg_slidefwd']/AudioClip[contains(@ClipName, 'pipe_smg_slidefwd')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_smg_slidefwd</set> 
+
+            <!-- ///// Weapon ADS SFX ///// -->
+	            <!--  ///// DRY FIRE /////-->
+	            <append xpath="/Sounds">
+                    <SoundDataNode name="pipesmg_dryfire"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+                    <Noise ID="6" noise="7" time="2" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponHandling.unity3d?MSFXauto_dryfire"/>
+                    <LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> 
+					<MaxRepeatRate value="0.001"/> <LowestPitch name="0.95"/> <HighestPitch name="1.25"/> </SoundDataNode>
+                </append>
+            <!-- ///// Weapon Distance Var SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor Distance Var SFX ///// -->
+
+        <!-- Tactical AR [x]; []; []; []; []; [] -->
+            <!-- ///// Weapon Fire SFX ///// -->
+                <!-- Audio Silent Bug Fix -->
+                <set xpath="/Sounds/SoundDataNode[@name='tacticalar_fire']/MaxVoices/@value">100</set>
+
+                <!-- Weapon Fire SFX-->
+                <set xpath="/Sounds/SoundDataNode[@name='tacticalar_fire']/AudioClip/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXtacticalar_fire-1</set>
+
+                <!-- Adds Serperate Suppressed Audio "tacticalar_s_fire" [SoundDataNode Similar to "ak47_s_fire"]-->
+                <append xpath="/Sounds">
+                    <SoundDataNode name="tacticalar_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+                    <Noise ID="5" noise="200" time="2" heat_map_strength="0.3" heat_map_time="120"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXtacticalar_s_fire-1"/>
+                    <!-- <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?tacticalar_s_fire-2"/> [Disabled Audio Clicking]-->
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXtacticalar_s_fire-3"/> 
+                    <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="100"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/> </SoundDataNode> 
+                </append>
+
+            <!-- ///// Weapon Reload SFX ///// -->
+                <!-- Tactical AR [x]; [x]; [] -->
+                <set xpath="/Sounds/SoundDataNode[@name='tacticalar_reload_part_01']/AudioClip[contains(@ClipName, 'tacticalar_reload_part_01')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXtacticalar_reload_part_01</set> <!-- Different Sound -->
+                <set xpath="/Sounds/SoundDataNode[@name='tacticalar_reload_part_02']/AudioClip[contains(@ClipName, 'tacticalar_reload_part_02')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXtacticalar_reload_part_02</set> <!-- Different Sound -->    
+                <set xpath="/Sounds/SoundDataNode[@name='tacticalar_reload_part_03']/AudioClip[contains(@ClipName, 'tacticalar_reload_part_03')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXtacticalar_reload_part_03</set>
+	        
+	            <!-- TODO: Fix Magin/Out Volume (Increase)-->
+	
+		        <!--  ///// DRY FIRE /////-->
+	            <append xpath="/Sounds">
+                    <SoundDataNode name="tacticalar_dryfire"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+                    <Noise ID="6" noise="7" time="2" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponHandling.unity3d?MSFXauto_dryfire"/>
+                    <LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> 
+					<MaxRepeatRate value="0.001"/> <LowestPitch name="0.9"/> <HighestPitch name="1.0"/> </SoundDataNode>
+                </append>
+            <!-- ///// Weapon ADS SFX ///// -->
+            <!-- ///// Weapon Distance Var SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor Distance Var SFX ///// -->
+
+        <!-- SMG [x]; [x]; []; []; []; [] -->
+            <!-- ///// Weapon Fire SFX ///// -->
+                <!-- Audio Silent Bug Fix -->
+                <set xpath="/Sounds/SoundDataNode[@name='smg_fire']/MaxVoices/@value">100</set>
+                <set xpath="/Sounds/SoundDataNode[@name='smg_fire_end']/MaxVoices/@value">100</set>
+                <set xpath="/Sounds/SoundDataNode[@name='smg_fire']/MaxVoices/@value">100</set>
+
+                <!-- Weapon Fire SFX-->
+                <set xpath="/Sounds/SoundDataNode[@name='smg_fire']/AudioClip[contains(@ClipName, 'smg_fire1')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXsmg_fire-1</set>
+                <set xpath="/Sounds/SoundDataNode[@name='smg_fire']/AudioClip[contains(@ClipName, 'smg_fire2')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXsmg_fire-2</set>
+                <set xpath="/Sounds/SoundDataNode[@name='smg_fire']/AudioClip[contains(@ClipName, 'smg_fire3')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXsmg_fire-3</set> 
+                <set xpath="/Sounds/SoundDataNode[@name='smg_fire']/AudioClip[contains(@ClipName, 'smg_fire4')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXsmg_fire-4</set>
+
+                <set xpath="/Sounds/SoundDataNode[@name='smg_fire_end']/AudioClip/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXsmg_fire_end</set>
+
+                <set xpath="/Sounds/SoundDataNode[@name='smg_s_fire']/AudioClip/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXsmg_s_fire-1</set>
+
+            <!-- ///// Weapon Reload SFX ///// -->
+                <!-- SMG [x]; [x]; [X] --> <!-- Additional Note Extra's may not be needed, depends on Sound Library -->
+                <set xpath="/Sounds/SoundDataNode[@name='smg_mag_out']/AudioClip[contains(@ClipName, 'smg_mag_out1')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXsmg_mag_out1</set>
+                <set xpath="/Sounds/SoundDataNode[@name='smg_mag_out']/AudioClip[contains(@ClipName, 'smg_mag_out2')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXsmg_mag_out2</set>
+                <set xpath="/Sounds/SoundDataNode[@name='smg_mag_out']/AudioClip[contains(@ClipName, 'smg_mag_out3')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXsmg_mag_out3</set>
+
+                <set xpath="/Sounds/SoundDataNode[@name='smg_mag_in']/AudioClip[contains(@ClipName, 'smg_mag_in1')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXsmg_mag_in1</set>
+                <set xpath="/Sounds/SoundDataNode[@name='smg_mag_in']/AudioClip[contains(@ClipName, 'smg_mag_in2')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXsmg_mag_in2</set>
+                <set xpath="/Sounds/SoundDataNode[@name='smg_mag_in']/AudioClip[contains(@ClipName, 'smg_mag_in3')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXsmg_mag_in3</set>
+
+                <set xpath="/Sounds/SoundDataNode[@name='smg_slide_back']/AudioClip[contains(@ClipName, 'smg_slide_back1')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXsmg_slide_back1</set>
+                <remove xpath="/Sounds/SoundDataNode[@name='smg_slide_back']/AudioClip[contains(@ClipName, 'smg_slide_back2')]"/>
+                <remove xpath="/Sounds/SoundDataNode[@name='smg_slide_back']/AudioClip[contains(@ClipName, 'smg_slide_back3')]"/>
+
+                <set xpath="/Sounds/SoundDataNode[@name='smg_slide_up']/AudioClip[contains(@ClipName, 'smg_slide_up1')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXsmg_slide_up1</set>
+                <remove xpath="/Sounds/SoundDataNode[@name='smg_slide_up']/AudioClip[contains(@ClipName, 'smg_slide_up2')]"/>
+                <remove xpath="/Sounds/SoundDataNode[@name='smg_slide_up']/AudioClip[contains(@ClipName, 'smg_slide_up3')]"/>
+                <remove xpath="/Sounds/SoundDataNode[@name='smg_slide_up']/AudioClip[contains(@ClipName, 'smg_slide_up4')]"/>
+
+                <set xpath="/Sounds/SoundDataNode[@name='smg_slide_fwd']/AudioClip[contains(@ClipName, 'smg_slide_fwd1')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXsmg_slide_fwd1</set>
+                <remove xpath="/Sounds/SoundDataNode[@name='smg_slide_fwd']/AudioClip[contains(@ClipName, 'smg_slide_fwd2')]"/>
+                <remove xpath="/Sounds/SoundDataNode[@name='smg_slide_fwd']/AudioClip[contains(@ClipName, 'smg_slide_fwd3')]"/>
+
+            <!-- ///// Weapon ADS SFX ///// -->
+	            <!--  ///// DRY FIRE /////-->
+	            <append xpath="/Sounds">
+                    <SoundDataNode name="smg_dryfire"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+                    <Noise ID="6" noise="7" time="2" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponHandling.unity3d?MSFXauto_dryfire"/>
+                    <LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> 
+					<MaxRepeatRate value="0.001"/> <LowestPitch name="0.9"/> <HighestPitch name="0.95"/> </SoundDataNode>
+                </append>
+            <!-- ///// Weapon Distance Var SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor Distance Var SFX ///// -->
+
+    <!-- Pistols Weapon Fire [x]; Reload []; ADS Audio []; Distance Variation []; Indoor/Outdoor Variation []; Indoor/Outdoor Distance Variation []; -->
+        <!-- 44 Magnum [x]; []; []; []; []; [] -->
+            <!-- ///// Weapon Fire SFX ///// -->
+                <remove xpath="/Sounds/SoundDataNode[@name='44magnum_fire']"/>
+
+                <append xpath="/Sounds">
+                    <SoundDataNode name="44magnum_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+                    <Noise ID="5" range="200" volume="500" time="3" heat_map_strength="0.5" heat_map_time="20"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFX44magnum_fire-1"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFX44magnum_fire-2"/>
+                    <LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="100"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode> 
+                </append>
+
+                <!-- Adds Serperate Suppressed Audio "44magnum_s_fire" [SoundDataNode Similar to "pump_shotgun_s_fire"]-->
+                <append xpath="/Sounds">
+                    <SoundDataNode name="44magnum_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+                    <Noise ID="5" noise="200" time="2" muffled_when_crouched="0.8" heat_map_strength="0.8" heat_map_time="180"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFX44magnum_s_fire-1"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFX44magnum_s_fire-2"/>
+                    <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="100"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode> 
+                </append>  
+
+                <!-- Adds Serperate Fire_End SFX [Same as SMG Fire] -->
+                <append xpath="/Sounds">
+                    <SoundDataNode name="44magnum_fire_end"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+                    <Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFX44magnum_fire_end-1"/>
+                    <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/></SoundDataNode>
+                </append>
+
+            <!-- ///// Weapon Reload SFX ///// -->
+            <!-- ///// Weapon ADS SFX ///// -->
+	            <!--  ///// DRY FIRE /////-->
+	            <append xpath="/Sounds">
+                    <SoundDataNode name="44mag_dryfire"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+                    <Noise ID="6" noise="7" time="2" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponHandling.unity3d?MSFXpistol_dryfire"/>
+                    <LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> 
+					<MaxRepeatRate value="0.001"/> <LowestPitch name="0.9"/> <HighestPitch name="0.95"/> </SoundDataNode>
+                </append>
+
+            <!-- ///// Weapon Distance Var SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor Distance Var SFX ///// -->
+        <!-- Desert Vulture [x]; [x]; []; []; []; [] -->
+            <!-- ///// Weapon Fire SFX ///// -->
+                <!-- Audio Silent Bug Fix -->
+                <set xpath="/Sounds/SoundDataNode[@name='desertvulture_fire']/MaxVoices/@value">100</set>
+
+                <!-- Weapon Fire SFX-->
+                <set xpath="/Sounds/SoundDataNode[@name='desertvulture_fire']/AudioClip[contains(@ClipName, 'desertvulture_fire1')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXdesertvulture_fire-1</set>
+                <set xpath="/Sounds/SoundDataNode[@name='desertvulture_fire']/AudioClip[contains(@ClipName, 'desertvulture_fire2')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXdesertvulture_fire-2</set>
+                <set xpath="/Sounds/SoundDataNode[@name='desertvulture_fire']/AudioClip[contains(@ClipName, 'desertvulture_fire3')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXdesertvulture_fire-3</set>
+
+                <!-- Adds Serperate Suppressed Audio "desertvulture_s_fire" [SoundDataNode Similar to "pump_shotgun_s_fire"]-->
+                <append xpath="/Sounds">
+                    <SoundDataNode name="desertvulture_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+                    <Noise ID="0" noise="38" time="2" muffled_when_crouched="0.8" heat_map_strength="0.8" heat_map_time="180"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXdesertvulture_s_fire-1"/> <!-- TODO: Needs to be Beefier/Louder-->
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXdesertvulture_s_fire-2"/>
+                    <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="100"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode> 
+                </append>
+
+                <!-- Adds Serperate Fire_End SFX [Same as SMG Fire] -->
+                <append xpath="/Sounds">
+                    <SoundDataNode name="desertvulture_fire_end"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+                    <Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXdesertvulture_fire_end-1"/>
+                    <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="100"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/></SoundDataNode>
+                </append>
+
+            <!-- ///// Weapon Reload SFX ///// -->
+                <!-- Desert Vulture [x]; [x]; [X] -->
+                <set xpath="/Sounds/SoundDataNode[@name='desertvulture_reload_part_01']/AudioClip[contains(@ClipName, 'desertvulture_reload_part_01')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXdesertvulture_reload_part_01</set>
+                <set xpath="/Sounds/SoundDataNode[@name='desertvulture_reload_part_02']/AudioClip[contains(@ClipName, 'desertvulture_reload_part_02')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXdesertvulture_reload_part_02</set>
+                <set xpath="/Sounds/SoundDataNode[@name='desertvulture_reload_part_03']/AudioClip[contains(@ClipName, 'desertvulture_reload_part_03')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXdesertvulture_reload_part_03</set>
+
+            <!-- ///// Weapon ADS SFX ///// -->
+	            <!--  ///// DRY FIRE /////-->
+	            <append xpath="/Sounds">
+                    <SoundDataNode name="desertvulture_dryfire"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+                    <Noise ID="6" noise="7" time="2" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponHandling.unity3d?MSFXpistol_dryfire"/>
+                    <LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> 
+					<MaxRepeatRate value="0.001"/> <LowestPitch name="0.9"/> <HighestPitch name="0.95"/> </SoundDataNode>
+                </append>
+
+            <!-- ///// Weapon Distance Var SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor Distance Var SFX ///// -->
+
+        <!--Pipe Pistol [x]; []; []; []; []; [] -->
+            <!-- ///// Weapon Fire SFX ///// -->
+                <!-- Audio Silent Bug Fix -->
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_pistol_fire']/MaxVoices/@value">100</set>
+
+                <!-- Weapon Fire SFX-->
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_pistol_fire']/AudioClip/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXpipe_pistol_fire-1</set>
+
+                <!-- Adds Serperate Suppressed Audio "pipe_pistol_s_fire" [SoundDataNode Similar to "pistol_s_fire"]-->
+                <append xpath="/Sounds">
+                    <SoundDataNode name="pipe_pistol_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+                    <Noise ID="0" noise="17" time="2" muffled_when_crouched="0.8" heat_map_strength="0.4" heat_map_time="180"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXpipe_pistol_s_fire-1"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXpipe_pistol_s_fire-2"/>
+                    <LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="100"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode> 
+                </append>
+
+            <!-- ///// Weapon Reload SFX ///// -->
+            <!-- ///// Weapon ADS SFX ///// -->
+	            <!--  ///// DRY FIRE /////-->
+	            <append xpath="/Sounds">
+                    <SoundDataNode name="pipepistol_dryfire"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+                    <Noise ID="6" noise="7" time="2" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponHandling.unity3d?MSFXpistol_dryfire"/>
+                    <LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> 
+					<MaxRepeatRate value="0.001"/> <LowestPitch name="0.9"/> <HighestPitch name="1.0"/> </SoundDataNode>
+                </append>
+
+            <!-- ///// Weapon Distance Var SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor Distance Var SFX ///// -->
+
+        <!--Pistol (Baretta) [x]; [x]; []; []; []; [] -->
+            <!-- ///// Weapon Fire SFX ///// -->
+                <!-- Audio Silent Bug Fix -->
+                <set xpath="/Sounds/SoundDataNode[@name='Pistol_Fire']/MaxVoices/@value">100</set>
+                <set xpath="/Sounds/SoundDataNode[@name='pistol_s_fire']/MaxVoices/@value">100</set>
+
+                <!-- Weapon Fire SFX-->
+                <set xpath="/Sounds/SoundDataNode[@name='Pistol_Fire']/AudioClip/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXpistol_fire-1</set>
+
+                <set xpath="/Sounds/SoundDataNode[@name='pistol_s_fire']/AudioClip/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXpistol_s_fire-1</set>
+
+            <!-- ///// Weapon Reload SFX ///// -->
+                <!-- Pistol [x]; [x]; [X] -->
+                    <set xpath="/Sounds/SoundDataNode[@name='pistol_mageject']/AudioClip[contains(@ClipName, 'pistol_mageject1')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpistol_mageject1</set>
+                    <remove xpath="/Sounds/SoundDataNode[@name='pistol_mageject']/AudioClip[contains(@ClipName, 'pistol_mageject2')]"/>
+                    
+                    <set xpath="/Sounds/SoundDataNode[@name='pistol_maginsert']/AudioClip[contains(@ClipName, 'pistol_maginsert1')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpistol_maginsert1</set>
+                    <remove xpath="/Sounds/SoundDataNode[@name='pistol_maginsert']/AudioClip[contains(@ClipName, 'pistol_maginsert2')]"/>
+
+                    <set xpath="/Sounds/SoundDataNode[@name='pistol_slideback']/AudioClip[contains(@ClipName, 'pistol_slideback1')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpistol_slideback1</set>
+                    <remove xpath="/Sounds/SoundDataNode[@name='pistol_slideback']/AudioClip[contains(@ClipName, 'pistol_slideback2')]"/>
+                    <remove xpath="/Sounds/SoundDataNode[@name='pistol_slideback']/AudioClip[contains(@ClipName, 'pistol_slideback3')]"/>
+
+                    <set xpath="/Sounds/SoundDataNode[@name='pistol_slidefwd']/AudioClip[contains(@ClipName, 'pistol_slidefwd1')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpistol_slidefwd1</set>
+                    <remove xpath="/Sounds/SoundDataNode[@name='pistol_slidefwd']/AudioClip[contains(@ClipName, 'pistol_slidefwd2')]"/>
+                    <remove xpath="/Sounds/SoundDataNode[@name='pistol_slidefwd']/AudioClip[contains(@ClipName, 'pistol_slidefwd3')]"/>
+            <!-- ///// Weapon ADS SFX ///// -->
+	            <!--  ///// DRY FIRE /////-->
+	            <append xpath="/Sounds">
+                    <SoundDataNode name="pistol_dryfire"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+                    <Noise ID="6" noise="7" time="2" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponHandling.unity3d?MSFXpistol_dryfire"/>
+                    <LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> 
+					<MaxRepeatRate value="0.001"/> <LowestPitch name="0.9"/> <HighestPitch name="1.0"/> </SoundDataNode>
+                </append>
+            <!-- ///// Weapon Distance Var SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor Distance Var SFX ///// -->        
+
+    <!-- Shotgun Weapon Fire [x]; Reload []; ADS Audio []; Distance Variation []; Indoor/Outdoor Variation []; Indoor/Outdoor Distance Variation []; -->
+        <!-- Auto Shotgun [x]; []; []; []; []; [] -->
+            <!-- ///// Weapon Fire SFX ///// -->
+                <!-- Audio Silent Bug Fix -->
+                <set xpath="/Sounds/SoundDataNode[@name='autoshotgun_fire']/MaxVoices/@value">100</set>
+
+                <!-- Weapon Fire SFX-->
+
+                <set xpath="/Sounds/SoundDataNode[@name='autoshotgun_fire']/AudioClip[contains(@ClipName, 'autoshotgun_fire1')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXauto_shotgun_fire-1</set>
+                <set xpath="/Sounds/SoundDataNode[@name='autoshotgun_fire']/AudioClip[contains(@ClipName, 'autoshotgun_fire2')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXauto_shotgun_fire-2</set>
+                <set xpath="/Sounds/SoundDataNode[@name='autoshotgun_fire']/AudioClip[contains(@ClipName, 'autoshotgun_fire3')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXauto_shotgun_fire-3</set>
+
+                <!-- Adds Serperate Suppressed Audio "auto_shotgun_s_fire" [SoundDataNode Similar to "pump_shotgun_s_fire"] -->
+                <append xpath="/Sounds">
+                    <SoundDataNode name="auto_shotgun_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+                    <Noise ID="5" noise="200" time="2" heat_map_strength="0.3" heat_map_time="120"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXauto_shotgun_s_fire-1"/>
+                    <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="100"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode> 
+                </append>
+
+                <!-- Adds Serperate Fire_End SFX [Same as M60 Fire] -->
+                <append xpath="/Sounds">
+                    <SoundDataNode name="autoshotgun_fire_end"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+                    <Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXautoshotgun_fire_end-1"/>
+                    <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="100"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/></SoundDataNode>
+                </append>
+
+            <!-- ///// Weapon Reload SFX ///// -->
+                <!-- Auto Shotgun [x]; [x]; [] -->
+                <set xpath="/Sounds/SoundDataNode[@name='autoshotgun_reload_part_01']/AudioClip[contains(@ClipName, 'autoshotgun_reload_part_01')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXautoshotgun_reload_part_01</set> <!-- Needs to be louder-->
+                <set xpath="/Sounds/SoundDataNode[@name='autoshotgun_reload_part_02']/AudioClip[contains(@ClipName, 'autoshotgun_reload_part_02')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXautoshotgun_reload_part_02</set>
+                <set xpath="/Sounds/SoundDataNode[@name='autoshotgun_reload_part_03']/AudioClip[contains(@ClipName, 'autoshotgun_reload_part_03')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXautoshotgun_reload_part_03</set> <!-- Less Noise -->
+
+            <!-- ///// Weapon ADS SFX ///// -->
+	            <!--  ///// DRY FIRE /////-->
+	            <append xpath="/Sounds">
+                    <SoundDataNode name="autoshotgun_dryfire"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+                    <Noise ID="6" noise="7" time="2" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponHandling.unity3d?MSFXautoshotgun_dryfire"/>
+                    <LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> 
+					<MaxRepeatRate value="0.001"/> <LowestPitch name="0.95"/> <HighestPitch name="1.0"/> </SoundDataNode>
+                </append>
+            <!-- ///// Weapon Distance Var SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor Distance Var SFX ///// -->
+
+        <!-- Double Barrel Shotgun [x]; []; []; []; []; [] -->
+            <!-- ///// Weapon Fire SFX ///// -->
+                <!-- Audio Silent Bug Fix -->
+                <set xpath="/Sounds/SoundDataNode[@name='shotgundb_fire']/MaxVoices/@value">100</set>
+
+                <!-- Weapon Fire SFX-->
+                <set xpath="/Sounds/SoundDataNode[@name='shotgundb_fire']/AudioClip[contains(@ClipName, 'shotgundb_fire1')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXshotgundb_fire-1</set>
+                <set xpath="/Sounds/SoundDataNode[@name='shotgundb_fire']/AudioClip[contains(@ClipName, 'shotgundb_fire2')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXshotgundb_fire-2</set>
+                <set xpath="/Sounds/SoundDataNode[@name='shotgundb_fire']/AudioClip[contains(@ClipName, 'shotgundb_fire3')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXshotgundb_fire-3</set>
+
+                <!-- Adds Serperate Suppressed Audio "shotgundb_s_fire" [SoundDataNode Similar to "pump_shotgun_s_fire"]-->    
+                <append xpath="/Sounds">
+                    <SoundDataNode name="shotgundb_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+                    <Noise ID="0" noise="38" time="2" muffled_when_crouched="0.8" heat_map_strength="0.8" heat_map_time="180"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXshotgundb_s_fire-1"/>
+                    <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="100"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode> 
+                </append>
+
+                <!-- Adds Serperate Fire_End SFX [Same as M60 Fire] -->
+                <append xpath="/Sounds">
+                    <SoundDataNode name="shotgundb_fire_end"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+                    <Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXshotgundb_fire_end-1"/>
+                    <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="100"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/></SoundDataNode>
+                </append>
+
+            <!-- ///// Weapon Reload SFX ///// -->
+            <!-- ///// Weapon ADS SFX ///// -->
+	            <!--  ///// DRY FIRE /////-->
+	            <append xpath="/Sounds">
+                    <SoundDataNode name="shotgundb_dryfire"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+                    <Noise ID="6" noise="7" time="2" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponHandling.unity3d?MSFXshotgun_dryfire"/>
+                    <LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> 
+					<MaxRepeatRate value="0.001"/> <LowestPitch name="0.9"/> <HighestPitch name="0.95"/> </SoundDataNode>
+                </append>
+            <!-- ///// Weapon Distance Var SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor Distance Var SFX ///// -->
+
+        <!-- Pipe Shotgun [x]; []; []; []; []; [] -->
+            <!-- ///// Weapon Fire SFX ///// -->
+                <!-- Audio Silent Bug Fix -->
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_shotgun_fire']/MaxVoices/@value">100</set>
+
+                <!-- Weapon Fire SFX-->
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_shotgun_fire']/AudioClip[contains(@ClipName, 'pipe_shotgun_fire1')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXpipe_shotgun_fire-1</set>
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_shotgun_fire']/AudioClip[contains(@ClipName, 'pipe_shotgun_fire2')]/@ClipName"> #@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXpipe_shotgun_fire-2</set>
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_shotgun_fire']/AudioClip[contains(@ClipName, 'pipe_shotgun_fire3')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXpipe_shotgun_fire-3</set>
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_shotgun_fire']/AudioClip[contains(@ClipName, 'pipe_shotgun_fire4')]/@ClipName"> #@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXpipe_shotgun_fire-4</set>
+
+                <!-- Adds Serperate Suppressed Audio "pipe_shotgun_s_fire" [SoundDataNode Similar to "pump_shotgun_s_fire"]-->          
+                <append xpath="/Sounds">
+                    <SoundDataNode name="pipe_shotgun_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+                    <Noise ID="5" noise="38" time="2" muffled_when_crouched="0.8" heat_map_strength="0.8" heat_map_time="180"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXpipe_shotgun_s_fire-1"/> <!-- TODO: Beefier Sound -->
+                    <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="100"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode> 
+                </append>
+
+                <!-- Adds Serperate Fire_End SFX [Same as M60 Fire] -->
+                <append xpath="/Sounds">
+                    <SoundDataNode name="pipe_shotgun_fire_end"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+                    <Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXpipe_shotgun_fire_end-1"/>
+                    <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="100"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/></SoundDataNode>
+                </append>
+
+            <!-- ///// Weapon Reload SFX ///// -->
+            <!-- ///// Weapon ADS SFX ///// -->
+	            <!--  ///// DRY FIRE /////-->
+	            <append xpath="/Sounds">
+                    <SoundDataNode name="pipeshotgun_dryfire"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+                    <Noise ID="6" noise="7" time="2" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponHandling.unity3d?MSFXshotgun_dryfire"/>
+                    <LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> 
+					<MaxRepeatRate value="0.001"/> <LowestPitch name="0.9"/> <HighestPitch name="1.0"/> </SoundDataNode>
+                </append>
+
+            <!-- ///// Weapon Distance Var SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor Distance Var SFX ///// -->
+        
+        <!-- Pump Shotgun [x]; []; []; []; []; [] -->
+            <!-- ///// Weapon Fire SFX ///// -->
+                <!-- Audio Silent Bug Fix -->
+                <set xpath="/Sounds/SoundDataNode[@name='pump_shotgun_fire']/MaxVoices/@value">100</set>
+                <set xpath="/Sounds/SoundDataNode[@name='pump_shotgun_s_fire']/MaxVoices/@value">100</set>
+
+                <!-- Weapon Fire SFX-->
+                <set xpath="/Sounds/SoundDataNode[@name='pump_shotgun_fire']/AudioClip[contains(@ClipName, 'pump_shotgun_fire1')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXpump_shotgun_fire-1</set>
+                <set xpath="/Sounds/SoundDataNode[@name='pump_shotgun_fire']/AudioClip[contains(@ClipName, 'pump_shotgun_fire2')]/@ClipName"> #@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXpump_shotgun_fire-2</set>
+                <set xpath="/Sounds/SoundDataNode[@name='pump_shotgun_fire']/AudioClip[contains(@ClipName, 'pump_shotgun_fire3')]/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXpump_shotgun_fire-3</set>
+                <set xpath="/Sounds/SoundDataNode[@name='pump_shotgun_fire']/AudioClip[contains(@ClipName, 'pump_shotgun_fire4')]/@ClipName"> #@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXpump_shotgun_fire-4</set>
+
+                <set xpath="/Sounds/SoundDataNode[@name='pump_shotgun_s_fire']/AudioClip/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXpump_shotgun_s_fire-1</set>
+           
+            <!-- ///// Weapon Reload SFX ///// -->
+            <!-- Pump Shotgun [x]; [x]; [] -->
+                <set xpath="/Sounds/SoundDataNode[@name='pump_shotgun_rack_back']/AudioClip[contains(@ClipName, 'pump_shotgun_rack_back1')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpump_shotgun_rack_back1</set> <!-- Shells Injection Sounds off-->
+                <set xpath="/Sounds/SoundDataNode[@name='pump_shotgun_rack_fwd']/AudioClip[contains(@ClipName, 'pump_shotgun_rack_fwd1')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpump_shotgun_rack_fwd1</set>
+                <!-- <set xpath="/Sounds/SoundDataNode[@name='shotgun_reload']/AudioClip[contains(@ClipName, 'shotgun_reload')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXshotgun_reload</set> --> <!-- ??? -->
+                <set xpath="/Sounds/SoundDataNode[@name='shotgun_reload_part_01']/AudioClip[contains(@ClipName, 'shotgun_reload_part_01')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXshotgun_reload_part_01</set>
+                <set xpath="/Sounds/SoundDataNode[@name='shotgun_reload_part_02']/AudioClip[contains(@ClipName, 'shotgun_reload_part_02')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXshotgun_reload_part_02</set>
+                <set xpath="/Sounds/SoundDataNode[@name='shotgun_reload_part_03']/AudioClip[contains(@ClipName, 'shotgun_reload_part_03')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXshotgun_reload_part_03</set>
+                <set xpath="/Sounds/SoundDataNode[@name='shotgun_reload_part_04']/AudioClip[contains(@ClipName, 'shotgun_reload_part_04')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXshotgun_reload_part_04</set>
+
+            <!-- ///// Weapon ADS SFX ///// -->
+	            <!--  ///// DRY FIRE /////-->
+	            <append xpath="/Sounds">
+                    <SoundDataNode name="pumpshotgun_dryfire"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+                    <Noise ID="6" noise="7" time="2" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponHandling.unity3d?MSFXshotgun_dryfire"/>
+                    <LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> 
+			        <MaxRepeatRate value="0.001"/> <LowestPitch name="0.9"/> <HighestPitch name="1.0"/> </SoundDataNode>
+                </append>
+            <!-- ///// Weapon Distance Var SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor Distance Var SFX ///// -->
+
+    <!-- Rifles Weapon Fire [x]; Reload []; ADS Audio []; Distance Variation []; Indoor/Outdoor Variation []; Indoor/Outdoor Distance Variation []; -->
+        <!-- Level Action Rifle [x]; []; []; []; []; [] -->
+            <!-- ///// Weapon Fire SFX ///// -->
+                <!-- Audio Silent Bug Fix -->
+                <set xpath="/Sounds/SoundDataNode[@name='lever_action_rifle_fire']/MaxVoices/@value">100</set>
+
+                <!-- Weapon Fire SFX-->
+                <set xpath="/Sounds/SoundDataNode[@name='lever_action_rifle_fire']/AudioClip/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXlever_action_rifle_fire-1</set>
+
+                <!-- Adds Serperate Suppressed Audio "lever_action_rifle_s_fire" [SoundDataNode Similar to "sniperrifle_s_fire"] -->
+                <append xpath="/Sounds">
+                    <SoundDataNode name="lever_action_rifle_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+                    <Noise ID="5" range="140" volume="300" time="2" heat_map_strength="0.5" heat_map_time="20"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXlever_action_rifle_s_fire-1"/>
+                    <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="100"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode> 
+                </append>
+
+            <!-- ///// Weapon Reload SFX ///// -->
+            <!-- ///// Weapon ADS SFX ///// -->
+	            <!--  ///// DRY FIRE /////-->
+	            <append xpath="/Sounds">
+                    <SoundDataNode name="leveraction_dryfire"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+                    <Noise ID="6" noise="7" time="2" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponHandling.unity3d?MSFXrifle_dryfire"/>
+                    <LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> 
+					<MaxRepeatRate value="0.001"/> <LowestPitch name="0.9"/> <HighestPitch name="1.0"/> </SoundDataNode>
+                </append>
+            <!-- ///// Weapon Distance Var SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor Distance Var SFX ///// -->
+
+        <!-- Pipe Rifle [x]; []; []; []; []; [] -->  
+            <!-- ///// Weapon Fire SFX ///// -->
+                <!-- Audio Silent Bug Fix -->
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_rifle_fire']/MaxVoices/@value">100</set>
+
+                <!-- Weapon Fire SFX-->
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_rifle_fire']/AudioClip/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXpipe_rifle_fire-1</set>
+
+                <!-- Adds Serperate Suppressed Audio "pipe_rifle_s_fire" [SoundDataNode Similar to "sniperrifle_s_fire"] -->
+                <append xpath="/Sounds">
+                    <SoundDataNode name="pipe_rifle_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+                    <Noise ID="0" noise="17" time="2" muffled_when_crouched="0.8" heat_map_strength="0.4" heat_map_time="180"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXpipe_rifle_s_fire-1"/>
+                    <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="100"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode> 
+                </append>
+
+                <!-- Adds Serperate Fire_End SFX [Same as M60 Fire] -->
+                <append xpath="/Sounds">
+                    <SoundDataNode name="pipe_rifle_fire_end"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+                    <Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXpipe_rifle_fire_end-1"/>
+                    <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="100"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/></SoundDataNode>
+                </append>
+
+            <!-- ///// Weapon Reload SFX ///// -->
+            <!-- ///// Weapon ADS SFX ///// -->
+	            <!--  ///// DRY FIRE /////-->
+	            <append xpath="/Sounds">
+                    <SoundDataNode name="piperifle_dryfire"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+                    <Noise ID="6" noise="7" time="2" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponHandling.unity3d?MSFXrifle_dryfire"/>
+                    <LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> 
+					<MaxRepeatRate value="0.001"/> <LowestPitch name="0.95"/> <HighestPitch name="1.0"/> </SoundDataNode>
+                </append>
+
+            <!-- ///// Weapon Distance Var SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor Distance Var SFX ///// -->
+
+        <!-- Sniper [x]; []; []; []; []; [] -->
+            <!-- ///// Weapon Fire SFX ///// -->
+                <!-- Audio Silent Bug Fix -->
+                <set xpath="/Sounds/SoundDataNode[@name='sniperrifle_fire']/MaxVoices/@value">100</set>
+                <set xpath="/Sounds/SoundDataNode[@name='sniperrifle_s_fire']/MaxVoices/@value">100</set>
+
+                <!-- Weapon Fire SFX-->
+                <set xpath="/Sounds/SoundDataNode[@name='sniperrifle_fire']/AudioClip/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXsniper_rifle_fire-1</set>
+                
+                <set xpath="/Sounds/SoundDataNode[@name='sniperrifle_s_fire']/AudioClip/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXsniper_rifle_s_fire-1</set>
+
+                <append xpath="/Sounds">
+                    <SoundDataNode name="sniperrifle_fire_end"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+                    <Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXsniper_rifle_fire_end-1"/>
+                    <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="100"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/></SoundDataNode>
+                </append>
+            <!-- ///// Weapon Reload SFX ///// -->
+                <!-- Sniper [x]; [x]; [] -->
+                <set xpath="/Sounds/SoundDataNode[@name='sniperrifle_reload_part_01']/AudioClip[contains(@ClipName, 'sniperrifle_reload_part_01')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXsniperrifle_reload_part_01</set> <!-- Delayed, Rework Needed-->
+                <set xpath="/Sounds/SoundDataNode[@name='sniperrifle_reload_part_02']/AudioClip[contains(@ClipName, 'sniperrifle_reload_part_02')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXsniperrifle_reload_part_02</set>
+                <set xpath="/Sounds/SoundDataNode[@name='sniperrifle_reload_part_03']/AudioClip[contains(@ClipName, 'sniperrifle_reload_part_03')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXsniperrifle_reload_part_03</set>
+                <set xpath="/Sounds/SoundDataNode[@name='sniperrifle_reload_part_04']/AudioClip[contains(@ClipName, 'sniperrifle_reload_part_04')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXsniperrifle_reload_part_04</set>
+            <!-- ///// Weapon ADS SFX ///// -->
+	            <!--  ///// DRY FIRE /////-->
+	            <append xpath="/Sounds">
+                    <SoundDataNode name="sniperrifle_dryfire"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+                    <Noise ID="6" noise="7" time="2" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponHandling.unity3d?MSFXrifle_dryfire"/>
+                    <LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> 
+					<MaxRepeatRate value="0.001"/> <LowestPitch name="0.9"/> <HighestPitch name="0.95"/> </SoundDataNode>
+                </append>
+            <!-- ///// Weapon Distance Var SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor Distance Var SFX ///// -->
+
+        <!-- SharpShooter[x]; []; []; []; []; []  --> 
+            <!-- ///// Weapon Fire SFX ///// -->
+                <!-- Audio Silent Bug Fix -->
+                <set xpath="/Sounds/SoundDataNode[@name='sharpshooter_fire']/MaxVoices/@value">100</set>
+                <set xpath="/Sounds/SoundDataNode[@name='sharpshooter_s_fire']/MaxVoices/@value">100</set>
+
+                <!-- Weapon Fire SFX-->
+                <set xpath="/Sounds/SoundDataNode[@name='sharpshooter_fire']/AudioClip/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXsharpshooter_fire-1</set>
+
+                <set xpath="/Sounds/SoundDataNode[@name='sharpshooter_s_fire']/AudioClip/@ClipName">#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXsharpshooter_s_fire-1</set>
+                
+                <append xpath="/Sounds">
+                    <SoundDataNode name="sharpshooter_fire_end"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+                    <Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponFire.unity3d?MSFXsharpshooter_fire_end-1"/>
+                    <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="100"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/></SoundDataNode>
+                </append>
+            <!-- ///// Weapon Reload SFX ///// -->
+                <!-- Sharpshooter [x]; [x]; [x] --> <!-- TODO: FOX ALL RELOAD-->
+                <set xpath="/Sounds/SoundDataNode[@name='hunting_rifle_reload_part_01']/AudioClip[contains(@ClipName, 'hunting_rifle_reload_part_01')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXhunting_rifle_reload_part_01</set>
+                <set xpath="/Sounds/SoundDataNode[@name='hunting_rifle_reload_part_02']/AudioClip[contains(@ClipName, 'hunting_rifle_reload_part_02')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXhunting_rifle_reload_part_02</set>
+                <set xpath="/Sounds/SoundDataNode[@name='hunting_rifle_reload_part_03']/AudioClip[contains(@ClipName, 'hunting_rifle_reload_part_03')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXhunting_rifle_reload_part_03</set>
+                <set xpath="/Sounds/SoundDataNode[@name='hunting_rifle_reload_part_04']/AudioClip[contains(@ClipName, 'hunting_rifle_reload_part_04')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXhunting_rifle_reload_part_04</set>
+                <set xpath="/Sounds/SoundDataNode[@name='hunting_rifle_reload_part_05']/AudioClip[contains(@ClipName, 'hunting_rifle_reload_part_05')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXhunting_rifle_reload_part_05</set>
+            <!-- ///// Weapon ADS SFX ///// -->
+	            <!--  ///// DRY FIRE /////-->
+	            <!--<append xpath="/Sounds">
+                    <SoundDataNode name="sharpshooter_dryfire"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+                    <Noise ID="6" noise="7" time="2" muffled_when_crouched="0.5"/>
+                    <AudioClip ClipName="#@modfolder:Resources/MSFXWeaponHandling.unity3d?MSFXrifle_dryfire"/>
+                    <LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> 
+					<MaxRepeatRate value="0.001"/> <LowestPitch name="0.9"/> <HighestPitch name="0.95"/> </SoundDataNode>
+                </append> -->
+            <!-- ///// Weapon Distance Var SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor SFX ///// -->
+            <!-- ///// Weapon Indoor vs Outdoor Distance Var SFX ///// -->
+
+    <!-- Explosions -->
+        <!-- Explosions "explosion1" "explosion2" "explosion3" (Not Sure What these reflect)-->
+            <set xpath="/Sounds/SoundDataNode[@name='explosion1']/AudioClip[contains(@ClipName, 'explosion1')]/@ClipName">#@modfolder:Resources/MSFXExplosion.unity3d?MSFXexplosion1</set>
+            <set xpath="/Sounds/SoundDataNode[@name='explosion2']/AudioClip[contains(@ClipName, 'explosion2')]/@ClipName">#@modfolder:Resources/MSFXExplosion.unity3d?MSFXexplosion2</set>
+            <set xpath="/Sounds/SoundDataNode[@name='explosion3']/AudioClip[contains(@ClipName, 'explosion3')]/@ClipName">#@modfolder:Resources/MSFXExplosion.unity3d?MSFXexplosion3</set> 
+
+        <!-- Grenades "explosion_grenade" (Looking into how to seperate this so each throwable has a unique explosion) [Clean Audio a Bit] [Works w/ Impact & Normal Grenades]-->
+            <set xpath="/Sounds/SoundDataNode[@name='explosion_grenade']/AudioClip[contains(@ClipName, 'explosion_grenade1')]/@ClipName">#@modfolder:Resources/MSFXExplosion.unity3d?MSFXexplosion_grenade1</set>
+            <set xpath="/Sounds/SoundDataNode[@name='explosion_grenade']/AudioClip[contains(@ClipName, 'explosion_grenade2')]/@ClipName">#@modfolder:Resources/MSFXExplosion.unity3d?MSFXexplosion_grenade2</set>
+            <set xpath="/Sounds/SoundDataNode[@name='explosion_grenade']/AudioClip[contains(@ClipName, 'explosion_grenade3')]/@ClipName">#@modfolder:Resources/MSFXExplosion.unity3d?MSFXexplosion_grenade3</set>
+            <set xpath="/Sounds/SoundDataNode[@name='explosion_grenade']/AudioClip[contains(@ClipName, 'explosion_grenade4')]/@ClipName">#@modfolder:Resources/MSFXExplosion.unity3d?MSFXexplosion_grenade4</set>
+
+	
+<!-- Auto Turrets // Bonus Content [WIP] -->
+	<!-- 9mm Turret -->
+	    <!--<set xpath="/Sounds/SoundDataNode[@name='turret_windup']/AudioClip[contains(@ClipName, 'turret_windup')]/@ClipName">#@modfolder:Resources/MSFXTurret.unity3d?MSFXturret_windup</set>-->
+
+	    <set xpath="/Sounds/SoundDataNode[@name='turret_fire']/AudioClip[contains(@ClipName, 'turret_fire1')]/@ClipName">#@modfolder:Resources/MSFXTurret.unity3d?MSFXturret_fire1</set>
+	    <set xpath="/Sounds/SoundDataNode[@name='turret_fire']/AudioClip[contains(@ClipName, 'turret_fire2')]/@ClipName">#@modfolder:Resources/MSFXTurret.unity3d?MSFXturret_fire2</set>
+	    <set xpath="/Sounds/SoundDataNode[@name='turret_fire']/AudioClip[contains(@ClipName, 'turret_fire3')]/@ClipName">#@modfolder:Resources/MSFXTurret.unity3d?MSFXturret_fire3</set>
+	    <set xpath="/Sounds/SoundDataNode[@name='turret_fire']/AudioClip[contains(@ClipName, 'turret_fire4')]/@ClipName">#@modfolder:Resources/MSFXTurret.unity3d?MSFXturret_fire4</set>
+	    <append xpath="/Sounds/SoundDataNode[@name='turret_fire']/AudioClip">
+		    <AudioClip ClipName="#@modfolder:Resources/MSFXTurret.unity3d?MSFXturret_fire5"/>
+	    </append>
+
+	    <!--<set xpath="/Sounds/SoundDataNode[@name='turret_overheat_lp']/AudioClip[contains(@ClipName, 'turret_overheat_lp')]/@ClipName">#@modfolder:Resources/MSFXTurret.unity3d?MSFXturret_overheat_lp</set>-->
+
+	    <!--<set xpath="/Sounds/SoundDataNode[@name='turret_retarget_lp']/AudioClip[contains(@ClipName, 'turret_retarget_lp')]/@ClipName">#@modfolder:Resources/MSFXTurret.unity3d?MSFXturret_retarget_lp</set>-->
+	
+	<!-- Shotgun Turret -->
+	<!--<append xpath="/Sounds">
+		<SoundDataNode name="shotgun_turret_fire"><AudioSource name="Sounds/AudioSource_WeaponFire"/><NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+			<Noise ID="0" noise="54" time="2" heat_map_strength="0.70" heat_map_time="180"/>
+			<AudioClip ClipName="#@modfolder:Resources/MSFXTurret.unity3d?MSFXshotgun_turret_fire1"/>
+			<AudioClip ClipName="#@modfolder:Resources/MSFXTurret.unity3d?MSFXshotgun_turret_fire2"/>
+			<AudioClip ClipName="#@modfolder:Resources/MSFXTurret.unity3d?MSFXshotgun_turret_fire3"/>
+			<LocalCrouchVolumeScale value="1"/><CrouchNoiseScale value="1"/><NoiseScale value="1"/><MaxVoices value="5"/><MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+	</append>-->
+	
+	<!-- Junk Turret -->
+	    <remove xpath="/Sounds/SoundDataNode[@name='junkturret_fire']/Noise"/>
+		
+		<append xpath="/Sounds/SoundDataNode[@name='junkturret_fire']">
+			<Noise ID="0" noise="54" time="2" heat_map_strength="0.25" heat_map_time="180"/>
+			<distantfadestart name="35"/><distantfadeend name="70"/>
+		</append>
+		
+	    <set xpath="/Sounds/SoundDataNode[@name='junkturret_fire']/AudioClip[contains(@ClipName, 'junkturret_fire1')]/@ClipName">#@modfolder:Resources/MSFXTurret.unity3d?MSFXjunkturret_fire1</set>
+	    <set xpath="/Sounds/SoundDataNode[@name='junkturret_fire']/AudioClip[contains(@ClipName, 'junkturret_fire2')]/@ClipName">#@modfolder:Resources/MSFXTurret.unity3d?MSFXjunkturret_fire2</set>
+	    <set xpath="/Sounds/SoundDataNode[@name='junkturret_fire']/AudioClip[contains(@ClipName, 'junkturret_fire3')]/@ClipName">#@modfolder:Resources/MSFXTurret.unity3d?MSFXjunkturret_fire3</set>
+
+	    <!--<set xpath="/Sounds/SoundDataNode[@name='junkturret_reload_part_01']/AudioClip[contains(@ClipName, 'junkturret_reload_part_01')]/@ClipName">#@modfolder:Resources/MSFXTurret.unity3d?MSFXjunkturret_reload_part_01</set>
+	    <set xpath="/Sounds/SoundDataNode[@name='junkturret_reload_part_02']/AudioClip[contains(@ClipName, 'junkturret_reload_part_02')]/@ClipName">#@modfolder:Resources/MSFXTurret.unity3d?MSFXjunkturret_reload_part_02</set>
+	    <set xpath="/Sounds/SoundDataNode[@name='junkturret_reload_part_03']/AudioClip[contains(@ClipName, 'junkturret_reload_part_03')]/@ClipName">#@modfolder:Resources/MSFXTurret.unity3d?MSFXjunkturret_reload_part_03</set>-->
+
+    <!-- [Development] Vinalla Misc Ranged Completed Writing [x]; Completed Sounds []; Bug Tested and Works [] -->
+        <!-- Misc Ranged Completed Writing [x]; Completed Sounds []; Bug Tested and Works [] -->
+            <!-- Primitive Bow -->
+            <!-- Wooden Bow -->
+            <!-- Compound Bow -->
+            <!-- Iron Cross Bow -->
+            <!-- Compound Crossbow -->
+	
+	
+	
+	
+	
+	<!-- ///// V2.0 ///// -->
+    <!-- [Development] Vinalla Weapon Reload SFX Completed Writing [x]; Completed Sounds []; Bug Tested and Works [] -->
+        <!-- ***** Template For Replacing Sound <set xpath="/Sounds/SoundDataNode[@name='Replace']/AudioClip[contains(@ClipName, 'Replace')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFX</set> -->
+        <!-- Pistols Completed Writing [x]; Completed Sounds []; Bug Tested and Works [] -->
+            <!-- 44 Magnum [x]; []; [] -->
+                <!-- [Disabled] 
+                <set xpath="/Sounds/SoundDataNode[@name='44magnum_reload']/AudioClip[contains(@ClipName, '44magnum_reload')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFX44magnum_reload</set>
+                <set xpath="/Sounds/SoundDataNode[@name='44magnum_reload_01']/AudioClip[contains(@ClipName, '44magnum_reload_01')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFX44magnum_reload_01</set>
+                <set xpath="/Sounds/SoundDataNode[@name='44magnum_reload_02']/AudioClip[contains(@ClipName, '44magnum_reload_02')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFX44magnum_reload_02</set>
+                <set xpath="/Sounds/SoundDataNode[@name='44magnum_reload_03']/AudioClip[contains(@ClipName, '44magnum_reload_03')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFX44magnum_reload_03</set>
+                <set xpath="/Sounds/SoundDataNode[@name='44magnum_reload_04']/AudioClip[contains(@ClipName, '44magnum_reload_04')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFX44magnum_reload_04</set>
+                <set xpath="/Sounds/SoundDataNode[@name='44magnum_reload_05']/AudioClip[contains(@ClipName, '44magnum_reload_05')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFX44magnum_reload_05</set>
+                -->
+
+            <!-- Pipe Pistol [x]; []; [] -->
+                <!-- [Disabled]
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_pistol_breech_shake1']/AudioClip[contains(@ClipName, 'pipe_pistol_breech_shake1')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_pistol_breech_shake1</set>
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_pistol_breech_open']/AudioClip[contains(@ClipName, 'pipe_pistol_breech_open')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_pistol_breech_open</set>
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_pistol_knockshells']/AudioClip[contains(@ClipName, 'pipe_pistol_knockshells')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_pistol_knockshells</set>
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_pistol_load']/AudioClip[contains(@ClipName, 'pipe_pistol_load')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_pistol_load</set>
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_pistol_breech_shake2']/AudioClip[contains(@ClipName, 'pipe_pistol_breech_shake2')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_pistol_breech_shake2</set>
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_pistol_breech_close']/AudioClip[contains(@ClipName, 'pipe_pistol_breech_close')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_pistol_breech_close</set>
+                -->            
+
+        <!-- Shotguns Completed Writing [x]; Completed Sounds []; Bug Tested and Works [] -->
+            <!-- Double Barrel Shotgun [x]; []; [] -->
+                <!--[Disabled]
+                <set xpath="/Sounds/SoundDataNode[@name='shotgundb_reload_part_01']/AudioClip[contains(@ClipName, 'shotgundb_reload_part_01')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXshotgundb_reload_part_01</set>
+                <set xpath="/Sounds/SoundDataNode[@name='shotgundb_reload_part_02']/AudioClip[contains(@ClipName, 'shotgundb_reload_part_02')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXshotgundb_reload_part_02</set>
+                <set xpath="/Sounds/SoundDataNode[@name='shotgundb_reload_part_03']/AudioClip[contains(@ClipName, 'shotgundb_reload_part_03')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXshotgundb_reload_part_03</set>-->
+
+            <!-- Pipe Shotgun [x]; []; [] -->
+                <!--[Disabled]
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_shotgun_latch']/AudioClip[contains(@ClipName, 'pipe_shotgun_latch')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_shotgun_latch</set>
+
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_shotgun_breech_open']/AudioClip[contains(@ClipName, 'pipe_shotgun_breech_open')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_shotgun_breech_open</set>
+
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_shotgun_shelleject']/AudioClip[contains(@ClipName, 'pipe_shotgun_shelleject1')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_shotgun_shelleject1</set>
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_shotgun_shelleject']/AudioClip[contains(@ClipName, 'pipe_shotgun_shelleject2')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_shotgun_shelleject2</set>
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_shotgun_shelleject']/AudioClip[contains(@ClipName, 'pipe_shotgun_shelleject3')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_shotgun_shelleject3</set>
+
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_shotgun_shellinsert']/AudioClip[contains(@ClipName, 'pipe_shotgun_shellinsert1')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_shotgun_shellinsert1</set>
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_shotgun_shellinsert']/AudioClip[contains(@ClipName, 'pipe_shotgun_shellinsert2')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_shotgun_shellinsert2</set>
+
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_shotgun_breech_close']/AudioClip[contains(@ClipName, 'pipe_shotgun_breech_close')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_shotgun_breech_close</set>
+
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_shotgun_hit1']/AudioClip[contains(@ClipName, 'pipe_shotgun_hit1')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_shotgun_hit1</set>
+
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_shotgun_hit2']/AudioClip[contains(@ClipName, 'pipe_shotgun_hit2')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_shotgun_hit2</set> 
+                -->
+
+        <!-- Rifles Completed Writing [x]; Completed Sounds []; Bug Tested and Works [] -->
+            <!-- Lever Action Rifle [x]; []; [] -->
+                <!-- [Disabled]
+                <set xpath="/Sounds/SoundDataNode[@name='lever_action_rifle_open']/AudioClip[contains(@ClipName, 'lever_action_rifle_open1')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXlever_action_rifle_open1</set>
+                <set xpath="/Sounds/SoundDataNode[@name='lever_action_rifle_open']/AudioClip[contains(@ClipName, 'lever_action_rifle_open2')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXlever_action_rifle_open2</set>
+
+                <set xpath="/Sounds/SoundDataNode[@name='lever_action_rifle_close']/AudioClip[contains(@ClipName, 'lever_action_rifle_close1')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXlever_action_rifle_close1</set>
+                <set xpath="/Sounds/SoundDataNode[@name='lever_action_rifle_close']/AudioClip[contains(@ClipName, 'lever_action_rifle_close2')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXlever_action_rifle_close2</set>
+
+                <set xpath="/Sounds/SoundDataNode[@name='lever_action_rifle_load']/AudioClip[contains(@ClipName, 'lever_action_rifle_load1')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXlever_action_rifle_load1</set>
+                <set xpath="/Sounds/SoundDataNode[@name='lever_action_rifle_load']/AudioClip[contains(@ClipName, 'lever_action_rifle_load2')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXlever_action_rifle_load2</set>
+                <set xpath="/Sounds/SoundDataNode[@name='lever_action_rifle_load']/AudioClip[contains(@ClipName, 'lever_action_rifle_load3')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXlever_action_rifle_load3</set>
+                <set xpath="/Sounds/SoundDataNode[@name='lever_action_rifle_load']/AudioClip[contains(@ClipName, 'lever_action_rifle_load4')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXlever_action_rifle_load4</set>
+                -->
+            <!-- Pipe Rifle [x]; []; [] -->
+                <!--[Disabled]
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_rifle_hit1']/AudioClip[contains(@ClipName, 'pipe_rifle_hit1')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_rifle_hit1</set>
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_rifle_hit2']/AudioClip[contains(@ClipName, 'pipe_rifle_hit2')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_rifle_hit2</set>
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_rifle_insertround']/AudioClip[contains(@ClipName, 'pipe_rifle_insertround')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_rifle_insertround</set>
+                <set xpath="/Sounds/SoundDataNode[@name='pipe_rifle_close']/AudioClip[contains(@ClipName, 'pipe_rifle_close')]/@ClipName">#@modfolder:Resources/MSFXReload.unity3d?MSFXpipe_rifle_close</set>
+                -->
+
+        <!-- Misc Weapons Completed Writing [x]; Completed Sounds []; Bug Tested and Works [] -->
+            <!-- Rocket Launcher -->
+                <!-- [Disabled]
+                <set xpath="/Sounds/SoundDataNode[@name='m136_reload_part_01']/AudioClip[contains(@ClipName, 'm136_reload_part_01')]/@ClipName">m136_reload_part_01</set>
+                <set xpath="/Sounds/SoundDataNode[@name='m136_reload_part_02']/AudioClip[contains(@ClipName, 'm136_reload_part_02')]/@ClipName">m136_reload_part_02</set>
+                <set xpath="/Sounds/SoundDataNode[@name='m136_reload_part_03']/AudioClip[contains(@ClipName, 'm136_reload_part_03')]/@ClipName">m136_reload_part_03</set>
+                -->
+
+</MSFX>

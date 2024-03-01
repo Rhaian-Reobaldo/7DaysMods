@@ -1,0 +1,305 @@
+<MSFXItems>
+<!-- Vinalla Weapon Fire SFX -->
+	<!--Automatics-->
+		<!--AK-->
+		<!--M60-->
+		<!--Pipe SMG-->
+		<!--SMG-->
+			
+	<!--Pistols-->
+		<!--44 Mag [+]-->
+			<set xpath="/items/item[@name='gunHandgunT2Magnum44']/property[@class='Action0']/property[@value='']/@value">44magnum_fire_end</set>
+		<!--Desert Vulture [+]-->
+			<set xpath="/items/item[@name='gunHandgunT3DesertVulture']/property[@class='Action0']/property[@value='']/@value">desertvulture_fire_end</set>
+		<!--Pipe Pistol-->
+		<!--Pistol-->
+       
+	<!--Rifles-->
+		<!--Lever Action Rifle-->
+		<!--Pipe Rifle-->
+		<!--Sniper Rifle-->
+			<set xpath="/items/item[@name='gunRifleT1HuntingRifle']/property[@class='Action0']/property[@value='']/@value">hunting_rifle_fire_end</set>
+		<!--Sharp Shooter-->
+			<set xpath="/items/item[@name='gunRifleT3SniperRifle']/property[@class='Action0']/property[@value='']/@value">sharp_shooter_rifle_fire_end</set>
+
+<!-- Vinalla Weapon ADS/DRYFIRE/BULLETCASING SFX -->    
+    <!--
+        <set xpath="/items/item[@name='REPLACE']/property[@class='Action0']/property[@name='Sound_empty']/@value">REPLACE</set>
+        -->
+	<!--Automatics-->
+		<!--AK-->
+            <set xpath="/items/item[@name='gunMGT1AK47']/property[@class='Action0']/property[@name='Sound_empty']/@value">ak47_dryfire</set>
+		<!--M60-->
+            <set xpath="/items/item[@name='gunMGT3M60']/property[@class='Action0']/property[@name='Sound_empty']/@value">m60_dryfire</set>
+		<!--Pipe SMG-->
+            <set xpath="/items/item[@name='gunMGT0PipeMachineGun']/property[@class='Action0']/property[@name='Sound_empty']/@value">pipesmg_dryfire</set>
+		<!-- Tactical AR -->
+            <set xpath="/items/item[@name='gunMGT2TacticalAR']/property[@class='Action0']/property[@name='Sound_empty']/@value">tacticalar_dryfire</set>
+        <!--SMG-->
+            <set xpath="/items/item[@name='gunHandgunT3SMG5']/property[@class='Action0']/property[@name='Sound_empty']/@value">smg_dryfire</set>
+			
+	<!--Pistols-->
+		<!--44 Mag-->
+            <set xpath="/items/item[@name='gunHandgunT2Magnum44']/property[@class='Action0']/property[@name='Sound_empty']/@value">44mag_dryfire</set>
+		<!--Desert Vulture-->
+            <set xpath="/items/item[@name='gunHandgunT3DesertVulture']/property[@class='Action0']/property[@name='Sound_empty']/@value">desertvulture_dryfire</set>
+		<!--Pipe Pistol-->
+            <set xpath="/items/item[@name='gunHandgunT0PipePistol']/property[@class='Action0']/property[@name='Sound_empty']/@value">pipepistol_dryfire</set>
+		<!--Pistol-->
+            <set xpath="/items/item[@name='gunHandgunT1Pistol']/property[@class='Action0']/property[@name='Sound_empty']/@value">pistol_dryfire</set>
+
+	<!--Shotguns-->
+		<!--Auto Shotgun-->
+            <set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/property[@class='Action0']/property[@name='Sound_empty']/@value">autoshotgun_dryfire</set>
+		<!--Double Barrel Shotgun-->
+            <set xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/property[@class='Action0']/property[@name='Sound_empty']/@value">shotgundb_dryfire</set>
+		<!--Pipe Shotgun-->
+            <set xpath="/items/item[@name='gunShotgunT0PipeShotgun']/property[@class='Action0']/property[@name='Sound_empty']/@value">pipeshotgun_dryfire</set>
+		<!--Pump Shotgun-->
+            <set xpath="/items/item[@name='gunShotgunT2PumpShotgun']/property[@class='Action0']/property[@name='Sound_empty']/@value">pumpshotgun_dryfire</set>
+
+	<!--Rifles-->
+		<!--Lever Action Rifle-->
+            <set xpath="/items/item[@name='gunRifleT2LeverActionRifle']/property[@class='Action0']/property[@name='Sound_empty']/@value">leveraction_dryfire</set>
+		<!--Pipe Rifle-->
+            <set xpath="/items/item[@name='gunRifleT0PipeRifle']/property[@class='Action0']/property[@name='Sound_empty']/@value">piperifle_dryfire</set>
+		<!--Sniper Rifle-->
+            <set xpath="/items/item[@name='gunRifleT1HuntingRifle']/property[@class='Action0']/property[@name='Sound_empty']/@value">sniperrifle_dryfire</set>
+		<!--Sharp Shooter-->
+            <set xpath="/items/item[@name='gunRifleT3SniperRifle']/property[@class='Action0']/property[@name='Sound_empty']/@value">sharpshooter_dryfire</set>
+
+<!-- Vinalla Weapon Reload SFX -->
+	<!--Automatics-->
+		<!--AK-->
+		<!--M60-->
+		<!--Pipe SMG-->
+		<!--SMG-->
+			
+	<!--Pistols-->
+		<!--44 Mag-->
+		<!--Desert Vulture-->
+		<!--Pipe Pistol-->
+		<!--Pistol-->
+
+	<!--Shotguns-->
+		<!--Auto Shotgun-->
+		<!--Double Barrel Shotgun-->
+		<!--Pipe Shotgun-->
+		<!--Pump Shotgun-->
+
+	<!--Rifles-->
+		<!--Lever Action Rifle-->
+		<!--Pipe Rifle-->
+		<!--Sniper Rifle-->
+		<!--Sharp Shooter-->
+
+
+<!-- Vinalla Melee SFX -->
+    <!-- Tools -->
+        <!-- Stone Axe [meleeToolRepairT0StoneAxe] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Taza's Stone Axe [meleeToolRepairT0TazasStoneAxe] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Claw Hammer [meleeToolRepairT1ClawHammer] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Iron Fireaxe [meleeToolAxeT1IronFireaxe] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Steel Fireaxe [meleeToolAxeT2SteelAxe] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Iron Pickaxe [meleeToolPickT1IronPickaxe] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Steel Pickaxe [meleeToolPickT2SteelPickaxe] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+            
+        <!-- Stone Shovel [meleeToolShovelT0StoneShovel] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Iron Shovel [meleeToolShovelT1IronShovel] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Steel Shovel [meleeToolShovelT2SteelShovel] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Wrench [meleeToolSalvageT1Wrench] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Ratchet [meleeToolSalvageT2Ratchet] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+    <!-- Knives -->
+        <!-- Bone Knife [meleeWpnBladeT0BoneKnife] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Hunting Knife [meleeWpnBladeT1HuntingKnife] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Candy Cane Knife [meleeWpnBladeT1CandyKnife] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Machete [meleeWpnBladeT3Machete] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+    <!-- Clubs -->
+        <!-- Wooden Club [meleeWpnClubT0WoodenClub] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Baseball Bat [meleeWpnClubT1BaseballBat] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Candy Cane Club [meleeWpnClubT1CandyClub] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Steel Club [meleeWpnClubT3SteelClub] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Pipe Baton [meleeWpnBatonT0PipeBaton] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Stun Baton [meleeWpnBatonT2StunBaton] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+    <!-- Spear -->
+        <!-- Stone Spear [meleeWpnSpearT0StoneSpear] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Iron Spear [meleeWpnSpearT1IronSpear] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Steel Spear [meleeWpnSpearT3SteelSpear] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+    <!-- Sledgehammer --> <!-- [Needs Sound Assignment in items.xml] -->
+        <!-- Stone Sledgehammer [meleeWpnSledgeT0StoneSledgehammer] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Iron Sledgehammer [meleeWpnSledgeT1IronSledgehammer] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Steel Sledgehammer [meleeWpnSledgeT3SteelSledgehammer] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+    <!-- First Weapons --> 
+        <!-- Hands [meleeHandMaster] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Knuckle Wraps [meleeWpnKnucklesT0LeatherKnuckles] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Iron Knuckles [meleeWpnKnucklesT1IronKnuckles] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Steel Knuckles [meleeWpnKnucklesT3SteelKnuckles] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+    <!-- Gas Powered -->
+        <!-- Chainsaw [meleeToolAxeT3Chainsaw] --> <!-- [Needs Sound Assignment in items.xml] -->
+             <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Auger [meleeToolPickT3Auger] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Impact Driver [meleeToolSalvageT3ImpactDriver] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Nailgun [meleeToolRepairT3Nailgun] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+    <!-- Misc-->
+        <!-- Torch [meleeToolTorch] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Iron Hoe [meleeToolFarmT1IronHoe] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+        <!-- Flashlight [meleeToolFlashlight02] --> <!-- [Needs Sound Assignment in items.xml] -->
+            <!-- Swing Heavy/Light -->
+            <!-- Impact -->
+            <!-- Add. Sound -->
+
+
+
+
+
+</MSFXItems>

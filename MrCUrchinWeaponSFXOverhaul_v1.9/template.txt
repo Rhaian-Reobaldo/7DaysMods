@@ -1,0 +1,44 @@
+[Weapon Sound Category's]
+    <!--Automatics-->
+        <!--AK-->
+        <!--M60-->
+        <!--Pipe SMG-->
+        <!--Tactical AR-->
+        <!--SMG-->
+        
+    <!--Pistols-->
+        <!--44 Mag-->
+        <!--Desert Vulture-->
+        <!--Pipe Pistol-->
+        <!--Pistol-->
+
+    <!--Shotguns-->
+        <!--Auto Shotgun-->
+        <!--Double Barrel Shotgun-->
+        <!--Pipe Shotgun-->
+        <!--Pump Shotgun-->
+
+    <!--Rifles-->
+        <!--Lever Action Rifle-->
+        <!--Pipe Rifle-->
+        <!--Sniper Rifle-->
+        <!--Sharp Shooter-->
+
+**Temp**
+		<!--Shotguns-->
+			<!--Auto Shotgun []-->
+				<set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/property[@class='Action0']/property[@value='']/@value">autoshotgun_fire_end</set>
+			<!--Double Barrel Shotgun []-->
+				<set xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/property[@class='Action0']/property[@value='']/@value">shotgundb_fire_end</set>
+			<!--Pipe Shotgun []-->
+				<set xpath="/items/item[@name='gunShotgunT0PipeShotgun']/property[@class='Action0']/property[@value='']/@value">pipe_shotgun_fire_end</set>
+			<!--Pump Shotgun-->
+
+		<!--Rifles-->
+			<!--Lever Action Rifle-->
+			<!--Pipe Rifle []-->
+				<set xpath="/items/item[@name='gunRifleT0PipeRifle']/property[@class='Action0']/property[@value='']/@value">pipe_rifle_fire_end</set>
+			<!--Sniper Rifle []-->
+				<set xpath="/items/item[@name='gunRifleT1HuntingRifle']/property[@class='Action0']/property[@value='']/@value">sniperrifle_fire_end</set>
+			<!--Sharp Shooter []-->
+				<set xpath="/items/item[@name='gunRifleT3SniperRifle']/property[@class='Action0']/property[@value='']/@value">sharpshooter_fire_end</set>

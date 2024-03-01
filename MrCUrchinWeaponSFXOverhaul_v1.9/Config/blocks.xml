@@ -1,0 +1,7 @@
+﻿<MSFXBlocksMod>
+	<!-- Auto Turret -->
+		<set xpath="/blocks/block[@name='autoTurret']/property[@value='Pistol_Fire']/@value">turret_fire</set>
+	<!-- Shotgun Turret -->
+		<!--<set xpath="/blocks/block[@name='shotgunTurret']/property[@value='pump_shotgun_fire']/@value">shotgun_turret_fire</set>-->
+
+</MSFXBlocksMod> 

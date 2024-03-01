@@ -1,0 +1,82 @@
+<MSFXItemMod>
+<!-- Vinalla Ranged Weapon SFX Overhaul -->
+    <!-- Automatics -->
+        <!-- AK -->
+            <!-- ///// Suppressed Variants ///// -->
+
+        <!-- M60 -->
+            <!-- ///// Suppressed Variants ///// -->
+
+        <!-- Pipe SMG -->
+            <!-- ///// Suppressed Variants ///// -->
+                <append xpath="/item_modifiers/item_modifier[@name='modGunSoundSuppressorSilencer']">
+                    <item_property_overrides name="gunMGT0PipeMachineGun">
+                        <property name="Sound_start" value="pipe_smg_s_fire"/>
+                        <!--  <property name="Sound_end" value="silencefiller"/> ???? -->
+                        <property name="Sound_loop" value="pipe_smg_s_fire"/>
+                    </item_property_overrides>        
+                </append>
+
+        <!-- Tactical AR  -->
+            <!-- ///// Suppressed Variants ///// -->
+                <set xpath="/item_modifiers/item_modifier/item_property_overrides[@name='gunMGT2TacticalAR']/property[@value='ak47_s_fire']/@value">tacticalar_s_fire</set>
+
+        <!-- SMG -->
+            <!-- ///// Suppressed Variants ///// -->
+
+    <!-- Pistols -->
+        <!-- 44 Mag -->
+            <!-- ///// Suppressed Variants ///// -->
+                <set xpath="/item_modifiers/item_modifier/item_property_overrides[@name='gunHandgunT2Magnum44']/property[@value='pump_shotgun_s_fire']/@value">44magnum_s_fire</set> 
+
+        <!-- Desert Vulture -->
+            <!-- ///// Suppressed Variants ///// -->
+                <set xpath="/item_modifiers/item_modifier/item_property_overrides[@name='gunHandgunT3DesertVulture']/property[@value='pump_shotgun_s_fire']/@value">desertvulture_s_fire</set>  
+
+        <!-- Pipe Pistol -->
+            <!-- ///// Suppressed Variants ///// -->
+                <set xpath="/item_modifiers/item_modifier/item_property_overrides[@name='gunHandgunT0PipePistol']/property[@value='pistol_s_fire']/@value">pipe_pistol_s_fire</set> 
+
+        <!-- Pistol -->
+            <!-- ///// Suppressed Variants ///// -->
+
+    <!-- Shotguns -->
+        <!-- Auto Shotgun -->
+            <!-- ///// Suppressed Variants ///// -->
+                <set xpath="/item_modifiers/item_modifier/item_property_overrides[@name='gunShotgunT3AutoShotgun']/property[@value='pump_shotgun_s_fire']/@value">auto_shotgun_s_fire</set> 
+
+        <!-- Double Barrel Shotgun -->
+            <!-- ///// Suppressed Variants ///// -->
+                <set xpath="/item_modifiers/item_modifier/item_property_overrides[@name='gunShotgunT1DoubleBarrel']/property[@value='pump_shotgun_s_fire']/@value">shotgundb_s_fire</set>
+
+        <!-- Pipe Shotgun -->
+            <!-- ///// Suppressed Variants ///// -->
+                <append xpath="/item_modifiers/item_modifier[@name='modGunSoundSuppressorSilencer']">
+                    <item_property_overrides name="gunShotgunT0PipeShotgun">
+                        <property name="Sound_start" value="pipe_shotgun_s_fire"/>
+                    </item_property_overrides>        
+                </append>
+
+        <!-- Pump Shotgun -->
+            <!-- ///// Suppressed Variants ///// -->
+
+    <!-- Rifles  -->
+        <!-- Lever Action Rifle -->
+            <!-- ///// Suppressed Variants ///// -->
+                <set xpath="/item_modifiers/item_modifier/item_property_overrides[@name='gunRifleT2LeverActionRifle']/property[@value='sniperrifle_s_fire']/@value">lever_action_rifle_s_fire</set> 
+
+        <!-- Pipe Rifle -->
+            <!-- ///// Suppressed Variants ///// -->
+                <append xpath="/item_modifiers/item_modifier">
+                    <item_property_overrides name="gunRifleT0PipeRifle">
+                        <property name="Sound_start" value="pipe_rifle_s_fire"/>
+                    </item_property_overrides>        
+                </append>
+
+        <!-- Sniper Rifle -->
+            <!-- ///// Suppressed Variants ///// -->
+
+        <!-- Sharp Shooter -->
+            <!-- ///// Suppressed Variants ///// -->
+
+</MSFXItemMod>

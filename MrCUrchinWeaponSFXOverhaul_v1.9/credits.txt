@@ -1,0 +1,36 @@
+** CREDITS **
+
+** Help / External Support for Developing this Mod**
+
+This section I want to take a moment to recognize those who helped me create this beautiful mod. Especially given the fact I have little no experience with 7D2D Modding.
+
+- Guppy's Unofficial 7DtD Modding Server
+    * Amazing Help Wealth of Information, everyone is exteremly friendly and all appreciate each other for any contributions they bring to the table.
+
+- Indvididual Who Helped in Any Capacity for Creating this Mod
+    * Telric indirecetly helped design the xml commands to override the vinalla SFX in place of this mods. Without this person this mod would not be possible. 
+        - Who: Telric
+        - Website: https://community.7daystodie.com/topic/25020-replacing-vanilla-weapons-audio/
+        - CODE: <set xpath="/Sounds/SoundDataNode[@name='NAME']/AudioClip/@ClipName">#@modfolder:Resources/NAME.unity3d?NAME </set>
+            - Allows the modder to replace aspects of the vanilla game with their own files
+    
+    * saminal, a discord user from Guppy's Modding Discord Server, helped me understand and also provided xpath design for changing specefic AudioClips within a SoundDataNode.
+        - Who: saminal
+        - Discord: Guppy's Unofficial 7DtD Modding Server
+        - CODE: <set xpath="/Sounds/SoundDataNode[@name='NAME']/AudioClip[contains(@ClipName, 'NAME')]/@ClipName">
+            - Gives the ability to replace specefic AudioClip Files
+        - CODE: <set xpath="/Sounds/SoundDataNode[@name='NAME']/AudioClip[2]/@ClipName">
+            - Gives the ability to replace specefic AudioClip Files [Alternate]
+    
+    * Gruppycur, a discord user from Guppy's Modding Discord Server, helped me solve one of the most annoying audio bugs, the infomous clicking/popping/cracking sound at the end of the audio track.
+        - Who: Gruppycur
+        - Discord: Guppy's Unofficial 7DtD Modding Server
+        - Solved Audio Bug
+            - Fix was Removing/Reducing/Fade-in Audio at the beginning of an audio track and then the audio bug would disappear
+        - Note: This input will be was greatest addition to this mod since the starting this mod.
+
+**SFX CREDITS**
+
+SFX Builds were used/created/designed by using assets from Escape from Tarkov (BattleStateGames) and a number of assets from Boom Library. 
+
+** Additional note, eventually all BSG sound will be removed once I become more confident in my sound design skills **

@@ -1,0 +1,25 @@
+<!--
+    Reference Vehicles Missing Sound Fix for distance variations
+    <requirement name="IsIndoors"/>
+
+-->
+
+<MSFXBuffs>
+<!-- Indoor vs Outdoor SFX -->
+<!--<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
+	<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffPlayAltIndoorSFX"/>
+</append>
+
+<append xpath="/buffs">
+    <buff name="buffPlayAltIndoorSFX" hidden="false" remove_on_death="false" icon="ui_game_symbol_fire" icon_color="255,0,0"> 
+		<stack_type value="replace"/>
+		<duration value="2"/>
+		<update_rate value=".1"/>   
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="1" buff="buffPlayAltIndoorSFX"><requirement class="IsIndoors"/></triggered_effect>
+            </effect_group>
+    </buff>
+</append>-->
+
+</MSFXBuffs>
+
